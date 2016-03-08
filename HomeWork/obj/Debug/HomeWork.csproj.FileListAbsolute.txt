@@ -1,0 +1,6 @@
+D:\codePratice\HomeWork\HomeWork\bin\HomeWork.dll.config
+D:\codePratice\HomeWork\HomeWork\bin\HomeWork.dll
+D:\codePratice\HomeWork\HomeWork\bin\HomeWork.pdb
+D:\codePratice\HomeWork\HomeWork\obj\Debug\HomeWork.csprojResolveAssemblyReference.cache
+D:\codePratice\HomeWork\HomeWork\obj\Debug\HomeWork.dll
+D:\codePratice\HomeWork\HomeWork\obj\Debug\HomeWork.pdb

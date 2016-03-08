@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Word Cards</title>
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="WorkAction.js"></script>
+    <link rel="stylesheet"
+          href="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script src="jquery.tmpl.min.js"></script>
+
+
+    <style>
+        div.ui-slider-switch {
+            position: absolute;
+            right: 1em;
+            top: 0.5em;
+        }
+
+        .center-button {
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div data-role="page" id="mainPage">
+        <!--<div data-role="header">-->
+        <h1>Word Cards</h1>
+        <!--</div>-->
+        <!--<div data-role="content">-->
+        <a href="#addNewWord" data-role="button" data-icon="info" class="ui-btn-right">新增</a>
+        <a href="#reviewWord" id="reviewBotn" data-role="button" data-icon="info" class="ui-btn-right">瀏覽</a>
+        <a href="#playGame" data-role="button" data-icon="info" class="ui-btn-right">遊戲</a>
+        <!--</div>-->
+    </div>
+
+    <div data-role="dailog" id="addNewWord">
+        <!--<div data-role="header">-->
+        <h5>新增單字</h5>
+        <!--</div>
+        <div data-role="content">-->
+        <div class="ui-grid-b center-wrapper" style="margin:1em auto;">
+            <div class="ui-block-a center-wrapper">&nbsp;</div>
+            <div class="ui-block-b center-wrapper" style="width: 90%;">
+                <!--<p> show success or not message </p>-->
+                <!--<div id="objDiv" style="z-index: 1; position: absolute;margin:10px 0 20px 0;">
+                    新增成功
+
+                    <p id="sendMessage" style="color:red;font-size:20px;"></p>
+                </div>-->
+                <div style="width:80%" class="center-wrapper">
+                    <input type="text" id="txtWord" placeholder="請輸入單字">
+                    <input type="text" id="txtSentence" placeholder="請輸入例句">
+                    <input type="text" id="txtTranslate" placeholder="請輸入單字翻譯">
+                    <input type="text" id="txtInfo" placeholder="請輸入單字說明">
+                </div>
+
+                <input type="button" id="btnAdd" data-icon="plus" data-iconpos="notext">
+            </div>
+            <div class="ui-block-c center-wrapper">&nbsp;</div>
+        </div>
+        <a href="#mainPage" data-role="button" data-icon="home">返回主畫面</a>
+        <!--</div>-->
+    </div>
+
+    <div data-role="dailog" id="reviewWord">
+        <!--<div data-role="header">-->
+        <h5>reviewWord</h5>
+        <!--</div>
+        <div data-role="content">-->
+        <ul id="reviewList" data-inset="true" style="list-style:none;"></ul>
+        <br>
+        <a href="#mainPage" data-role="button" data-icon="home">返回主畫面</a>
+        <!--</div>-->
+    </div>
+
+    <div data-role="dailog" id="playGame">
+        <div data-role="header">
+            <h1>playGame</h1>
+        </div>
+        <div data-role="content">
+            <a href="#mainPage" data-role="button" data-icon="home">返回主畫面</a>
+        </div>
+    </div>
+
+    <script id="liTemplate" type="text/x-jquery-tmpl">
+        <li data-icon="false" style="display:none;">
+            <a href="#">
+                <h3>Word</h3>
+                <p id="liSentence">Sentence</p>
+                <div>
+                    <p id="liTranslate">Translate</p>
+                    <p id="liInfo">Info</p>
+                    <!--<select data-role="slider">
+                        <option value="0">待買</option>
+                        <option value="1">已購</option>
+                    </select>-->
+                    <!--<a href="#" data-role="button" id="btnright" data-icon="plus" data-iconpos="notext" onclick="userSwipeListToRight()" />
+                    <a href="#" data-role="button" id="btnRemove" data-icon="delete" data-iconpos="notext" onclick="userDeleteItem()" />
+                    <a href="#" data-role="button" id="btnleft" data-icon="plus" data-iconpos="notext" onclick="userSwipeListToLeft()" />-->
+                </div>
+            </a>
+        </li>
+    </script>
+
+</body>
+</html>
